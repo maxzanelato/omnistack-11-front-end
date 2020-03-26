@@ -7,11 +7,12 @@ import logoImg from "../../assets/logo.svg";
 import { FiPower, FiTrash2 } from "react-icons/fi";
 
 export default function Profile() {
+  const ongName = localStorage.getItem("ongName");
   return (
     <div className="profile-container">
       <header>
         <img src={logoImg} alt="Logo" />
-        <span>Bem vinda, APAD</span>
+        <span>Bem vinda, {ongName}</span>
 
         <Link className="button" to="/incidents/new">
           Cadastrar novo caso
